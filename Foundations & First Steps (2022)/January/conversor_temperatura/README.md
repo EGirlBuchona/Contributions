@@ -10,11 +10,11 @@ This is a simple console program in Java that converts temperatures between Cels
 ## Dependencies
 - Java JDK 8 or higher
 
+Note: This project was initially developed using Oracle JDK 17, the latest version available in December 2021. As of November 2024, it has been updated and tested with Oracle JDK 23, the most recent release.
+
 # Conversor de Temperatura en Python
 
 Este es un programa de consola sencillo en Python que convierte temperaturas entre Celsius, Fahrenheit y Kelvin. Permite a los usuarios seleccionar la conversión deseada e ingresar el valor de la temperatura.
-
-Note: This project was initially developed using Oracle JDK 17, the latest version available in December 2021. As of November 2024, it has been updated and tested with Oracle JDK 23, the most recent release.
 
 ## Instrucciones
 
