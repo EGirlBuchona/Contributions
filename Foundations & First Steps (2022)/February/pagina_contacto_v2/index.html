@@ -1,0 +1,66 @@
+<!-- Gustavo Cocone Zavaleta | GitHub: @EgirlBuchona | © 2022 -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contacto - Gustavo Cocone Zavaleta</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <p>¿Tienes alguna pregunta o necesitas más información? ¡Contáctame!</p>
+    </header>
+
+    <section class="formulario-contacto">
+        <form id="contactForm" action="#" method="post" onsubmit="return validarFormulario()">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Tu nombre">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required minlength="10"
+                placeholder="Escribe tu mensaje aquí"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2022 Gustavo Cocone Zavaleta - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function validarFormulario() {
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            if (nombre.length < 3) {
+                alert("El nombre debe tener al menos 3 caracteres.");
+                return false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Por favor, ingresa un correo electrónico válido.");
+                return false;
+            }
+
+            if (mensaje.length < 10) {
+                alert("El mensaje debe tener al menos 10 caracteres.");
+                return false;
+            }
+
+            alert("Formulario enviado exitosamente.");
+            return true;
+        }
+    </script>
+</body>
+
+</html>
