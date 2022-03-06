@@ -1,0 +1,32 @@
+<!-- Gustavo Cocone Zavaleta | GitHub: @EgirlBuchona | © 2022 -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinanza</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Juego de Adivinanza</h1>
+        <p>Adivina el número entre 1 y 100</p>
+    </header>
+
+    <section>
+        <input type="number" id="intento" placeholder="Escribe un número" min="1" max="100">
+        <button onclick="adivinar()">Adivinar</button>
+        <p id="mensaje"></p>
+        <p>Intentos: <span id="intentos">0</span></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2022 Gustavo Cocone Zavaleta - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
