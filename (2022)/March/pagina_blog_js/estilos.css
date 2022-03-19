@@ -1,0 +1,48 @@
+/* Gustavo Cocone Zavaleta | GitHub: @EgirlBuchona | © 2022 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #0073e6;
+    font-size: 2.5em;
+}
+
+#blog {
+    width: 100%;
+    max-width: 800px;
+}
+
+.publicacion {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.publicacion h2 {
+    color: #0073e6;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}

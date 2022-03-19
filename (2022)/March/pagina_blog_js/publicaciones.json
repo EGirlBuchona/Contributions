@@ -1,0 +1,17 @@
+[
+    {
+        "titulo": "Mi primera publicación",
+        "fecha": "2022-01-15",
+        "contenido": "Esta es la introducción a mi blog. Espero que disfrutes leyendo mis artículos."
+    },
+    {
+        "titulo": "Explorando JavaScript",
+        "fecha": "2022-02-10",
+        "contenido": "En esta publicación, hablo sobre las funcionalidades clave de JavaScript."
+    },
+    {
+        "titulo": "Por qué me encanta programar",
+        "fecha": "2022-03-05",
+        "contenido": "La programación es más que un trabajo, es una pasión. Aquí comparto mi experiencia."
+    }
+]
