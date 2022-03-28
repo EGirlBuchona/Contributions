@@ -1,0 +1,51 @@
+<!-- Gustavo Cocone Zavaleta | GitHub: @EgirlBuchona | © 2022 -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Interactiva</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Encuesta de Opinión</h1>
+        <p>Comparte tu opinión sobre diversos temas</p>
+    </header>
+
+    <section id="encuesta">
+        <form id="formularioEncuesta">
+            <label for="pregunta1">¿Cuál es tu lenguaje de programación favorito?</label>
+            <select id="pregunta1" name="pregunta1">
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+            </select>
+
+            <label for="pregunta2">¿Cuánto tiempo dedicas a la programación diariamente?</label>
+            <select id="pregunta2" name="pregunta2">
+                <option value="menos de 1 hora">Menos de 1 hora</option>
+                <option value="1-2 horas">1-2 horas</option>
+                <option value="3-4 horas">3-4 horas</option>
+                <option value="más de 4 horas">Más de 4 horas</option>
+            </select>
+
+            <button type="button" onclick="enviarEncuesta()">Enviar Encuesta</button>
+        </form>
+
+        <div id="resultado">
+            <!-- Resultados de la encuesta se mostrarán aquí -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2022 Gustavo Cocone Zavaleta - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
