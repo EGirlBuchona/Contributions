@@ -1,0 +1,27 @@
+<!-- Gustavo Cocone Zavaleta | GitHub: @EgirlBuchona | © 2022 -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+            <button type="button" onclick="validarLogin()">Ingresar</button>
+            <p id="error-msg" class="error-msg"></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
