@@ -1,0 +1,26 @@
+<!-- Gustavo Cocone Zavaleta | GitHub: @EgirlBuchona | © 2022 -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Juego del Ahorcado</h1>
+        <div id="juego">
+            <p id="palabra"></p>
+            <p>Intentos restantes: <span id="intentos"></span></p>
+            <input type="text" id="letra" maxlength="1" placeholder="Ingresa una letra">
+            <button onclick="adivinarLetra()">Adivinar</button>
+            <p id="mensaje"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
