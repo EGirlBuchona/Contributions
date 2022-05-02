@@ -1,9 +1,3 @@
-```
-- **Nota:** Este código implementa un sistema básico de autenticación JWT en una API Flask. Los usuarios pueden autenticarse en la ruta `/login` y recibir un token, que deben proporcionar en los headers para acceder a la ruta protegida `/protegido`.
-
----
-
-```markdown
 # API with JWT Authentication in Flask
 
 This project is an API created with Flask that implements authentication using JWT (JSON Web Tokens). The API allows users to authenticate with credentials and receive a token to access protected endpoints.
@@ -66,5 +60,5 @@ Este proyecto es una API creada con Flask que implementa autenticación mediante
 ## Dependencias
 - Flask
 - PyJWT
-```
+
 
