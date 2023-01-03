@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/(2023)/January/Persona_Blog_Flask/static/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="blog-header">
+        <h1>Personal Blog</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/register">Register</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="login-container">
+        <h2>Welcome Back</h2>
+        <p>Please login to your account</p>
+        <form method="POST" action="/login" class="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/register">Register here</a>.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Personal Blog | Powered by Flask</p>
+        <!-- Gustavo Cocone Zavaleta | GitHub: @EgirlBuchona | © 2023 -->
+    </footer>
+</body>
+
+</html>
