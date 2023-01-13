@@ -14,7 +14,7 @@
             <h1>Welcome to My Personal Blog</h1>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="/(2023)/January/Personal_Blog_Flask/templates/index.html">Home</a></li>
                     <li><a href="/(2023)/January/Personal_Blog_Flask/templates/register.html">Register</a></li>
                     <li><a href="/(2023)/January/Personal_Blog_Flask/templates/login.html">Login</a></li>
                 </ul>
@@ -22,31 +22,24 @@
         </div>
     </header>
 
-    <main class="main-content">
-        <div class="hero-section">
-            <h2>Discover My Thoughts and Ideas</h2>
-            <p>Welcome to my blog, where I share my journey, stories, and insights. Dive into my latest posts below!</p>
-        </div>
+<section class="hero-section">
+    <h2>Discover My Thoughts and Ideas</h2>
+    <p>Welcome to my blog, where I share my journey, stories, and insights. Dive into my latest posts below!</p>
+</section>
 
-        <section class="blog-posts">
-            <article class="blog-card">
-                <h3>Post Title 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum venenatis justo...</p>
-                <a href="#" class="btn-secondary">Read More</a>
-            </article>
-            <article class="blog-card">
-                <h3>Post Title 2</h3>
-                <p>Quisque vitae tortor nec urna luctus venenatis. Integer vel nulla nec urna scelerisque...</p>
-                <a href="#" class="btn-secondary">Read More</a>
-            </article>
-            <article class="blog-card">
-                <h3>Post Title 3</h3>
-                <p>Vivamus viverra, felis a fermentum cursus, purus nulla pharetra justo, in convallis...</p>
-                <a href="#" class="btn-secondary">Read More</a>
-            </article>
-        </section>
-    </main>
 
+<main class="blog-posts">
+    {% for post in posts %}
+    <article class="blog-card">
+        <h3>{{ post[1] }}</h3>
+        <p>{{ post[2][:100] }}...</p> 
+        <footer>
+            <a href="/post/{{ post[0] }}" class="btn-secondary">Read More</a>
+            <p class="date">Posted on {{ post[3] }}</p>
+        </footer>
+    </article>
+    {% endfor %}
+</main>
     <footer class="main-footer">
         <p>© 2023 Gustavo Cocone Zavaleta | GitHub: @EgirlBuchona</p>
     </footer>
