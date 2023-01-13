@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 import sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = "your_secret_key"  # Cambia esta clave para producción
 
 
@@ -67,6 +67,37 @@ def login():
             else:
                 flash("Invalid username or password.", "danger")
     return render_template("login.html")
+
+# ** Registro de usuario **
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confirm_password = request.form.get("confirm_password")
+
+        # Validar que las contraseñas coincidan
+        if password != confirm_password:
+            flash("Passwords do not match!", "danger")
+            return redirect(url_for("register"))
+
+        # Conectar con la base de datos
+        with sqlite3.connect("blog.db") as conn:
+            cursor = conn.cursor()
+            
+            # Verificar si el usuario ya existe
+            cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
+            if cursor.fetchone():
+                flash("Username already exists!", "danger")
+                return redirect(url_for("register"))
+
+            # Insertar el nuevo usuario
+            cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
+            conn.commit()
+            flash("User registered successfully!", "success")
+            return redirect(url_for("login"))
+
+    return render_template("register.html")
 
 
 # ** Cerrar sesión **

@@ -1,105 +1,161 @@
-/* Global styles */
+/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f7f9fc;
-    color: #333;
+    background: #f4f4f9;
+    color: #2b2b2b;
     line-height: 1.6;
 }
 
 a {
-    color: #007BFF;
+    color: #3498db;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #0056b3;
+    color: #1d6fa5;
 }
 
 /* Header */
-header.blog-header {
-    background: linear-gradient(45deg, #007BFF, #0056b3);
+header {
+    background: linear-gradient(90deg, #1e90ff, #007BFF);
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.nav-links {
+    margin: 1rem 0 0;
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #007BFF;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header.blog-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-header.blog-header nav a {
+.nav-links a:hover {
+    background: #0056b3;
     color: #fff;
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid #fff;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: background 0.3s ease, color 0.3s ease;
 }
 
-header.blog-header nav a:hover {
+/* Hero Section */
+.hero-section {
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, #007BFF, #1e90ff);
+    color: #fff;
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    padding: 0.8rem 1.5rem;
     background: #fff;
-    color: #0056b3;
+    color: #007BFF;
+    font-weight: 600;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Main content */
-main {
-    max-width: 800px;
+.btn-primary:hover {
+    background: #0056b3;
+    color: #fff;
+}
+
+/* Blog Section */
+.blog-posts {
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
-article.blog-post {
+.blog-card {
     background: #fff;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
     border-radius: 10px;
+    padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
-article.blog-post:hover {
+.blog-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-article.blog-post h2 {
-    margin-top: 0;
+.blog-card h3 {
+    color: #007BFF;
     font-size: 1.5rem;
-    color: #007BFF;
+    margin-bottom: 1rem;
 }
 
-article.blog-post p {
-    margin: 1rem 0;
+.blog-card p {
     color: #555;
+    margin-bottom: 1.5rem;
 }
 
-article.blog-post footer {
+.blog-card .btn-secondary {
+    padding: 0.5rem 1.5rem;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.blog-card .btn-secondary:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #2b2b2b;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
     font-size: 0.9rem;
-    color: #888;
-    text-align: right;
 }
 
-article.blog-post footer a {
+footer a {
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+footer a:hover {
     color: #007BFF;
-    font-weight: 500;
 }
 
-article.blog-post footer a:hover {
-    color: #0056b3;
-}
-
-/* Login Container */
-.login-container {
+/* Login & Register Forms */
+.form-container {
     max-width: 400px;
     margin: 3rem auto;
     background: #fff;
@@ -109,77 +165,76 @@ article.blog-post footer a:hover {
     text-align: center;
 }
 
-.login-container h2 {
-    font-size: 1.8rem;
+.form-container h2 {
+    font-size: 2rem;
     color: #007BFF;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.login-container p {
+.form-container p {
+    font-size: 1rem;
     color: #555;
     margin-bottom: 2rem;
 }
 
-.login-form .form-group {
-    margin-bottom: 1.5rem;
+.form-group {
     text-align: left;
+    margin-bottom: 1.5rem;
 }
 
-.login-form label {
-    display: block;
-    font-weight: 500;
+.form-group label {
+    font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #333;
+    display: block;
 }
 
-.login-form input {
+.form-group input {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
+    border: 1px solid #ddd;
     transition: border-color 0.3s ease;
+    font-size: 1rem;
 }
 
-.login-form input:focus {
+.form-group input:focus {
     border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.btn-login {
+.btn-submit {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
     background: #007BFF;
     color: #fff;
-    border: none;
-    padding: 0.8rem 1.5rem;
     border-radius: 25px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.btn-login:hover {
+.btn-submit:hover {
     background: #0056b3;
 }
 
-.login-container a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: 500;
+/* Error & Success Messages */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: left;
 }
 
-.login-container a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #007BFF;
+.alert-error {
+    background: #e74c3c;
     color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9rem;
+}
+
+.alert-success {
+    background: #2ecc71;
+    color: #fff;
 }
